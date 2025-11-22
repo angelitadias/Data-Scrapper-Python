@@ -76,14 +76,15 @@ def processar_pdfs(pasta="."):
 
     # Salva CSVs finais
     texto_df.to_csv("resultado_textos.csv", index=False, encoding="utf-8-sig")
-    print("\n📄 Texto extraído salvo em: resultado_textos.csv")
+    print("\nTexto extraído salvo em: resultado_textos.csv")
 
     if not tabelas_df.empty:
         tabelas_df.to_csv("resultado_tabelas_estatisticas.csv", index=False, encoding="utf-8-sig")
-        print("📊 Tabelas e estatísticas salvas em: resultado_tabelas_estatisticas.csv")
+        print("Tabelas e estatísticas salvas em: resultado_tabelas_estatisticas.csv")
     else:
-        print("⚠️ Nenhuma tabela com dados numéricos encontrada para análise.")
+        print("Nenhuma tabela com dados numéricos encontrada para análise.")
 
 
 if __name__ == "__main__":
     processar_pdfs(".")
+
